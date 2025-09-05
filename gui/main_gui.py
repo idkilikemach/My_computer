@@ -1,25 +1,27 @@
+# TODO main_gui is unfinished
 import os
 import tkinter
 from tkinter import *
-USER = os.getlogin()
+USER = os.getlogin() # Get window user account name.
 
-main_menu = Tk() #create window for main_menu
-main_menu.geometry("400x300") #set wm window
-main_menu.title("My computer")
-main_menu.iconphoto(False, tkinter.PhotoImage(file=r"C:\Users\ComServices\PycharmProjects\My computer\image file\testimage.png"))
-#why th do i spend sm time on icon 32x32 TO GET SOMETHING LIKE THIS
+# Images for every interface, so I will not have to see long path files name.
+icon_image_file = r"C:\Users\ComServices\PycharmProjects\My computer\image file\testimage.png"
+my_pc_high_pixel_image = r"C:\Users\ComServices\PycharmProjects\My computer\image file\my_pc_high_pizel.png"
+mypc_smileface = r"C:\Users\ComServices\PycharmProjects\My computer\image file\my_pc_^-^.png" # This one is for reaction when touch it
+
+main_menu = Tk() # Create window for main_menu.
+main_menu.geometry("400x300") # Set width x height window.
+main_menu.title("My computer") # Set title name.
+main_menu.iconphoto(False, tkinter.PhotoImage(file=icon_image_file)) #Set icon.
 
 touch_button = Button(main_menu)
 
-# its start text
-mypc_text = Label(main_menu, text="Hello, how may i can help you today?", font= 10) #make a text
-#enter to confirm the commands
-enter = Button(main_menu, text="Enter")
+mypc_text = Label(main_menu, text="Hello, how may i can help you today?", font= 10) # Make a text for my pc to talk.
 
-#face to display
-mypc_face = PhotoImage(file=r"C:\Users\ComServices\PycharmProjects\My computer\image file\my_pc_high_pizel.png")
-#this one is for reaction when touch it
-mypc_smileface = PhotoImage(file=r"C:\Users\ComServices\PycharmProjects\My computer\image file\my_pc_^-^.png")
+enter = Button(main_menu, text="Enter") # Enter button for confirming the commands the user select.
+
+mypc_face = PhotoImage(file=my_pc_high_pixel_image) # Face to display and to show emotion.
+
 
 mypc_show_image = Label(main_menu, image=mypc_face, width=250, height=140)
 textbox = Entry(main_menu, justify=LEFT, width=50) # to choose or type the command in
