@@ -1,7 +1,7 @@
 # TODO chat_bot is unfinished
-import tkinter as tk
 from tkinter import *
-from gui.main_gui import icon_image_file
+
+icon_image_file = r"C:\Users\ComServices\PycharmProjects\My computer\image file\testimage.png"
 chat = Tk() # create window
 chat.geometry("400x300") #change window size
 chat.title("Talk to me")
@@ -9,7 +9,7 @@ sent = Button(chat, text="Send", width=10, height=3) # a button to send text to 
 save = Button(chat, text="Save", width=6) # save the conversation
 load = Button(chat, text="Load", width=6) # load the conversation
 chat_textbox = Text(chat, height=4, width=46) # input text
-chat.iconphoto(False, tk.PhotoImage(file=icon_image_file)) # change icon
+chat.iconphoto(False, PhotoImage(file=icon_image_file)) # change icon
 scroll_bar = Scrollbar(chat) #scroll throng the chat
 #message test
 text = Label(chat, text="You : Well i think i like you")
